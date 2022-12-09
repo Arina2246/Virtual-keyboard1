@@ -22,6 +22,5 @@ class Header{
       noteText.innerHTML = 'Keyboard for Windows. Press Ctrl+Alt to change language';
       note.append(noteText);
     }
-
-  }
+}
 export default Header;

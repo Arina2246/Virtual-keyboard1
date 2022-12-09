@@ -45,9 +45,23 @@ table {
 }
 /* style */
 body{
-    background: -webkit-linear-gradient(63deg,#d7e4f2,#a7b0ec,#ad6dcb);
-     background: linear-gradient(63deg,#d7e4f2,#a7b0ec,#ad6dcb); 
+	background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
 }
 .wrapper{
-    background-color: white;
+	width: 600px;
+	margin: 40px auto 15px auto;
+}
+.header{
+	display: flexbox;
+	height: 175px;
+}
+.note{
+	font-style: italic;
+	font-size: 20px;
+	text-align: center;
+	line-height:30px;
+	display: inline-block;
+	width: 230px;
+	vertical-align: top;
+	padding: 35px 20px 0px 20px;
 }
