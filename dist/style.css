@@ -84,9 +84,7 @@ body{
 	line-height: 45px;
 	border-radius: 45px;
 	margin: 5px 5px;
-	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
-	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 3px;
 	font-weight: 600;
@@ -96,9 +94,7 @@ body{
 	transition: .3s;
 }
 .button:hover{
-    background: #2EE59D;
     box-shadow: 0 5px 8px rgba(46, 229, 157, .4);
-    color: white;
 	cursor: pointer;
 }
 .Backspace{
@@ -121,5 +117,6 @@ body{
 }
 .activeButton{
 	background: #2EE59D;
+	color: white;
 	transform: translateY(5px);
 }

@@ -52,7 +52,7 @@ export const BUTTONS_RUS = [
   'б',
   'ю',
   '.',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -60,8 +60,8 @@ export const BUTTONS_RUS = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -119,7 +119,7 @@ export const BUTTONS_RUS_SHIFT = [
   'Б',
   'Ю',
   ',',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -127,8 +127,8 @@ export const BUTTONS_RUS_SHIFT = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -186,7 +186,7 @@ export const BUTTONS_RUS_CAPS = [
   'Б',
   'Ю',
   '.',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -194,8 +194,8 @@ export const BUTTONS_RUS_CAPS = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -253,7 +253,7 @@ export const BUTTONS_RUS_SHIFT_CAPS = [
   'б',
   'ю',
   ',',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -261,7 +261,7 @@ export const BUTTONS_RUS_SHIFT_CAPS = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];

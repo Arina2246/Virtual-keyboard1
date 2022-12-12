@@ -1,6 +1,15 @@
 import { BUTTONS_LABEL } from '../../constants/buttonsLabel.js';
+import ButtonInput from './buttons/buttonInput.js';
+import Animation from './animation.js';
 
 class Keyboard {
+  buttonInput: ButtonInput;
+  animation: Animation;
+
+  constructor() {
+    this.buttonInput = new ButtonInput();
+    this.animation = new Animation();
+  }
   addKeyboard() {
     const keyboard = document.createElement('div');
     keyboard.className = 'keyboard';
@@ -21,9 +30,11 @@ class Keyboard {
     eventAnimation ? (action = 'mousedown') : (action = 'mouseup');
     container.addEventListener(action, (event) => {
       const clickedButton = event.target as Element;
-      if (clickedButton.className.indexOf('button') !== -1) {
-        this.addAnimation(clickedButton, eventAnimation);
+      if (clickedButton.classList.contains('button')) {
+        this.animation.addAnimation(clickedButton, eventAnimation);
+        this.buttonInput.addInputText(clickedButton, eventAnimation);
       }
+      this.animation.addFocusTextArea();
     });
   }
 
@@ -31,26 +42,18 @@ class Keyboard {
     let action = '';
     eventAnimation ? (action = 'keydown') : (action = 'keyup');
     window.addEventListener(action, (event) => {
+      event.preventDefault();
       const e = event as KeyboardEvent;
       const buttons = document.querySelectorAll('.button');
       const clickedButton = e.code;
       for (let i = 0; i < buttons.length; i++) {
-        if (buttons[i].className.indexOf(clickedButton) !== -1) {
-          this.addAnimation(buttons[i], eventAnimation);
+        if (buttons[i].classList.contains(clickedButton)) {
+          this.animation.addAnimation(buttons[i], eventAnimation);
+          this.buttonInput.addInputText(buttons[i], eventAnimation);
         }
       }
+      this.animation.addFocusTextArea();
     });
-  }
-
-  addAnimation(button: Element, action: Boolean) {
-    const activeCapsLock = button.className.indexOf('CapsLock') !== -1;
-    if (activeCapsLock && action) {
-      button.classList.toggle('activeButton');
-    } else if (!activeCapsLock && action) {
-      button.classList.add('activeButton');
-    } else if (!activeCapsLock && !action) {
-      button.classList.remove('activeButton');
-    }
   }
 }
 export default Keyboard;

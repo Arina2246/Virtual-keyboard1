@@ -52,7 +52,7 @@ export const BUTTONS_ENG = [
   ',',
   '.',
   '/',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -60,8 +60,8 @@ export const BUTTONS_ENG = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -119,7 +119,7 @@ export const BUTTONS_ENG_SHIFT = [
   '<',
   '>',
   '?',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -127,8 +127,8 @@ export const BUTTONS_ENG_SHIFT = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -186,7 +186,7 @@ export const BUTTONS_ENG_CAPS = [
   ',',
   '.',
   '/',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -194,8 +194,8 @@ export const BUTTONS_ENG_CAPS = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
 
@@ -253,7 +253,7 @@ export const BUTTONS_ENG_SHIFT_CAPS = [
   '<',
   '>',
   '?',
-  '◄',
+  '▲',
   'Shift',
   'Ctrl',
   'Win',
@@ -261,7 +261,7 @@ export const BUTTONS_ENG_SHIFT_CAPS = [
   '',
   'Alt',
   '◄',
-  '◄',
-  '◄',
+  '▼',
+  '►',
   'Ctrl',
 ];
