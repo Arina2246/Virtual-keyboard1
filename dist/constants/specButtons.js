@@ -1,0 +1,12 @@
+export var TAB = 'Tab';
+export var DELETE = 'Delete';
+export var BACKSPACE = 'Backspace';
+export var ENTER = 'Enter';
+export var CAPS_LOCK = 'CapsLock';
+export var SHIFT_LEFT = 'ShiftLeft';
+export var SHIFT_RIGHT = 'ShiftRight';
+export var ALT_LEFT = 'AltLeft';
+export var ALT_RIGHT = 'AltRight';
+export var CONTRIL_LEFT = 'ControlLeft';
+export var CONTROL_RIGHT = 'ControlRight';
+export var META_LEFT = 'MetaLeft';

@@ -1,0 +1,9 @@
+export var ENG = 'ENG';
+export var ENG_SHIFT = 'ENG_SHIFT';
+export var ENG_CAPS = 'ENG_CAPS';
+export var ENG_SHIFT_CAPS = 'ENG_SHIFT_CAPS';
+export var RUS = 'RUS';
+export var RUS_SHIFT = 'RUS_SHIFT';
+export var RUS_CAPS = 'RUS_CAPS';
+export var RUS_SHIFT_CAPS = 'RUS_SHIFT_CAPS';
+export var LANG = 'lang';
