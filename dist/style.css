@@ -63,7 +63,7 @@ body{
 	justify-content: space-between;
 }
 .header{
-	display: flexbox;
+	display: flex;
 	height: 175px;
 }
 .note{
