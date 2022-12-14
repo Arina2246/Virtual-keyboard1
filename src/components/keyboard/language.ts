@@ -25,57 +25,58 @@ import {
 
 class Language {
   buttonInscription: ButtonInscription;
+  buttons: string[][];
+  lang: string[];
   constructor() {
     this.buttonInscription = new ButtonInscription();
+    this.buttons = [
+      BUTTONS_ENG,
+      BUTTONS_ENG_SHIFT,
+      BUTTONS_ENG_CAPS,
+      BUTTONS_ENG_SHIFT_CAPS,
+      BUTTONS_RUS,
+      BUTTONS_RUS_SHIFT,
+      BUTTONS_RUS_CAPS,
+      BUTTONS_RUS_SHIFT_CAPS,
+    ];
+    this.lang = [
+      ENG,
+      ENG_SHIFT,
+      ENG_CAPS,
+      ENG_SHIFT_CAPS,
+      RUS,
+      RUS_SHIFT,
+      RUS_CAPS,
+      RUS_SHIFT_CAPS,
+    ];
   }
   addLanguage() {
     const language = localStorage.getItem(LANG);
-    if (language === ENG) {
-      this.buttonInscription.addButtonInscription(BUTTONS_ENG);
-    } else if (language === RUS) {
-      this.buttonInscription.addButtonInscription(BUTTONS_RUS);
-    } else {
+    if (!language) {
       this.buttonInscription.addButtonInscription(BUTTONS_ENG);
       localStorage.setItem(LANG, ENG);
+    } else {
+      for (let i = 0; i < this.lang.length; i++) {
+        if (language === this.lang[i]) {
+          this.buttonInscription.addButtonInscription(this.buttons[i]);
+        }
+      }
     }
   }
   switchLanguage() {
     const language = localStorage.getItem(LANG);
-    switch (language) {
-      case ENG:
-        this.buttonInscription.addButtonInscription(BUTTONS_RUS);
-        localStorage.setItem(LANG, RUS);
-        break;
-      case ENG_CAPS:
-        this.buttonInscription.addButtonInscription(BUTTONS_RUS_CAPS);
-        localStorage.setItem(LANG, RUS_CAPS);
-        break;
-      case ENG_SHIFT:
-        this.buttonInscription.addButtonInscription(BUTTONS_RUS_SHIFT);
-        localStorage.setItem(LANG, RUS_SHIFT);
-        break;
-      case ENG_SHIFT_CAPS:
-        this.buttonInscription.addButtonInscription(BUTTONS_RUS_SHIFT_CAPS);
-        localStorage.setItem(LANG, RUS_SHIFT_CAPS);
-        break;
-      case RUS:
-        this.buttonInscription.addButtonInscription(BUTTONS_ENG);
-        localStorage.setItem(LANG, ENG);
-        break;
-      case RUS_CAPS:
-        this.buttonInscription.addButtonInscription(BUTTONS_ENG_CAPS);
-        localStorage.setItem(LANG, ENG_CAPS);
-        break;
-      case RUS_SHIFT:
-        this.buttonInscription.addButtonInscription(BUTTONS_ENG_SHIFT);
-        localStorage.setItem(LANG, ENG_SHIFT);
-        break;
-      case RUS_SHIFT_CAPS:
-        this.buttonInscription.addButtonInscription(BUTTONS_ENG_SHIFT_CAPS);
-        localStorage.setItem(LANG, ENG_SHIFT_CAPS);
-        break;
+    for (let i = 0; i < this.lang.length / 2; i++) {
+      if (language === this.lang[i]) {
+        this.buttonInscription.addButtonInscription(this.buttons[i + 4]);
+        localStorage.setItem(LANG, this.lang[i + 4]);
+      }
+    }
+    for (let i = 4; i < this.lang.length; i++) {
+      if (language === this.lang[i]) {
+        this.buttonInscription.addButtonInscription(this.buttons[i - 4]);
+        localStorage.setItem(LANG, this.lang[i - 4]);
+      }
     }
   }
 }
 export default Language;
-// shift caps lang
